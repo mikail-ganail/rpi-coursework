@@ -1,0 +1,65 @@
+.map-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+.map-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.map-page__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.map-page__subtitle {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.map-page__map {
+  flex: 1;
+  min-height: 480px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+}
+
+/* Оформление попапа Leaflet */
+
+.leaflet-popup-content {
+  margin: 8px 10px;
+}
+
+.map-popup__title {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.map-popup__trip {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.map-popup__desc {
+  margin: 0 0 4px;
+  font-size: 13px;
+}
+
+.map-popup__meta {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.map-popup__btn {
+  width: 100%;
+}

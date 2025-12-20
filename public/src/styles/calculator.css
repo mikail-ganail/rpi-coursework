@@ -1,0 +1,158 @@
+.calculator-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* селект путешествия */
+
+.calculator-trip-select {
+  align-self: flex-start;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  font-size: 13px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+/* общий вид секций */
+
+.calculator-section {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.calculator-section__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calculator-section__header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Плановый бюджет */
+
+.calculator-plan-table {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.calculator-plan-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.calculator-plan-row span {
+  font-size: 13px;
+  color: #374151;
+}
+
+.calculator-plan-input {
+  width: 120px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  font-size: 13px;
+  text-align: right;
+}
+
+.calculator-plan-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.calculator-plan-summary strong {
+  font-weight: 600;
+}
+
+/* Фактические расходы */
+
+.calculator-expense-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) 0.8fr 1fr 1.4fr auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.calculator-expense-form select,
+.calculator-expense-form input {
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  font-size: 13px;
+}
+
+.calculator-expense-summary {
+  font-size: 13px;
+  color: #4b5563;
+}
+
+/* Участники и сплит */
+
+.calculator-participants {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.calculator-participants-input {
+  flex: 1;
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  font-size: 13px;
+}
+
+.calculator-settlement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.calculator-settlement-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Адаптив под узкие экраны */
+
+@media (max-width: 900px) {
+  .calculator-expense-form {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .calculator-expense-form button {
+    grid-column: 1 / -1;
+    justify-self: flex-start;
+  }
+
+  .calculator-plan-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .calculator-plan-input {
+    width: 100%;
+    text-align: left;
+  }
+}

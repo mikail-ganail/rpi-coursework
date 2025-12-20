@@ -1,0 +1,62 @@
+.trip-page {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.trip-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trip-page__title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.trip-page__subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.trip-page__section {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+}
+
+.trip-page__section--summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.trip-page__summary-block h2 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.trip-page__summary-block p {
+  margin: 0 0 4px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.trip-page__section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trip-page__todo-hint {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #6b7280;
+}

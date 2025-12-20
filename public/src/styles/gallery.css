@@ -1,0 +1,39 @@
+.collection-page__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* по умолчанию 3 фото в ряд на десктопе */
+.collection-photo {
+  flex: 0 0 calc(25%);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.collection-photo__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.collection-photo__image:hover {
+  cursor: zoom-in;
+}
+
+/* планшет — 2 в ряд */
+@media (max-width: 900px) {
+  .collection-photo {
+    flex: 0 0 calc(50% - 8px);
+  }
+}
+
+/* мобильный — 1 в ряд */
+@media (max-width: 600px) {
+  .collection-photo {
+    flex: 0 0 100%;
+  }
+}
