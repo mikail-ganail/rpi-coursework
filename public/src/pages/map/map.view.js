@@ -33,17 +33,12 @@ function initTripMap(container) {
     container.textContent = "Leaflet не загружен";
     return;
   }
-
-  // Центр карты — условно Европа
   const map = L.map(container).setView([30, 25], 3);
-
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 18,
     attribution: "&copy; OpenStreetMap contributors",
   }).addTo(map);
-
   const bounds = [];
-
   trips.forEach((trip) => {
     if (!trip.places || !trip.places.length) return;
 
@@ -82,12 +77,9 @@ function initTripMap(container) {
       marker.bindPopup(popupHtml);
     });
   });
-
   if (bounds.length) {
     map.fitBounds(bounds, { padding: [40, 40] });
   }
-
-  // обработчик клика по кнопке внутри попапа
   map.on("popupopen", (e) => {
     const popupEl = e.popup.getElement();
     const btn = popupEl.querySelector(".map-popup__btn");
@@ -98,3 +90,4 @@ function initTripMap(container) {
     });
   });
 }
+

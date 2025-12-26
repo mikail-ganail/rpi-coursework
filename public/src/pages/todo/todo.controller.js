@@ -1,4 +1,3 @@
-// src/pages/todo/todo.controller.js
 import { todoBoards } from "../../mocks/todo/boards.mock.js";
 
 let currentBoardId = todoBoards[0].id;

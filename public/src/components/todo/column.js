@@ -1,4 +1,3 @@
-// src/components/todo/column.js
 import { createTaskCard } from "./task-card.js";
 
 export function createTodoColumn(

@@ -1,5 +1,3 @@
-// src/mocks/trips/trips.mock.js
-
 export const trips = [
   {
     id: "karelia-2025",

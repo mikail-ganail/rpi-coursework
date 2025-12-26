@@ -20,8 +20,8 @@ export function getInitialPlan(tripId) {
     days,
     travelersCount: trip?.travelersCount ?? 1,
     categories,
-    expenses: [], // фактические траты
-    participants: [], // участники для сплита
+    expenses: [],
+    participants: [],
   };
 }
 
@@ -50,7 +50,6 @@ export function getPerDay(state) {
   return getPlannedTotal(state) / (state.days || 1);
 }
 
-/* фактические расходы */
 
 export function addExpense(state, { categoryId, amount, paidBy, note }) {
   const value = Number(amount) || 0;
@@ -97,6 +96,6 @@ export function getSettlement(state) {
 
   return state.participants.map((p) => ({
     name: p.name,
-    balance: +(p.paid - share).toFixed(2), // >0 — ему должны, <0 — он должен
+    balance: +(p.paid - share).toFixed(2),
   }));
 }

@@ -1,4 +1,3 @@
-// src/pages/todo/todo.view.js
 import { createBoardSelector } from "../../components/todo/board-selector.js";
 import { createTodoColumn } from "../../components/todo/column.js";
 import {
@@ -96,7 +95,7 @@ function initDragAndDrop(root) {
       const columnId = columnEl.dataset.columnId;
       moveTask(draggedId, columnId);
       const pageRoot = root.closest("#page-root");
-      renderTodoPage({}, pageRoot); // или renderTodoPage(params, pageRoot)
+      renderTodoPage({}, pageRoot);
     });
   });
 }
